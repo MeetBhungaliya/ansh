@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        line: {
+          from: {
+            top: "0"
+          },
+          to: {
+            top: "100%"
+          }
+        }
+      },
+      animation: {
+        line: "line 20s ease infinite"
+      }
+    },
   },
   plugins: [],
 }

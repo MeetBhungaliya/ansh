@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .line {
+        @apply h-full w-[1px] absolute top-0 -z-[10] bg-[#1c1c1c] before:content-[''] before:w-[1px] before:absolute before:right-[-1px] before:h-[60px] before:bg-[linear-gradient(0deg,#fff,transparent)] before:animate-line
+    }
+}
