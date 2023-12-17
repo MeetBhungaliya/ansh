@@ -48,3 +48,38 @@
     from{left:-15%}
     to{left:100%}
   }
+  @keyframes blur{
+    0%{
+      opacity: 0;
+    text-shadow: 0 0 100px #fff;
+    }
+    5%{    text-shadow: 0 0 90px #fff;}
+    100%{opacity: 1;
+      text-shadow: 0 0 0 #fff}
+  }
+
+  html{
+   height: -webkit-fill-available;
+  }
+
+  body{
+   height: -webkit-fill-available;
+  }
+
+  .blur1{
+   animation: blur 2s ease-out;
+   -webkit-animation: blur 2s ease-out;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   background: transparent;
+   color: transparent;
+  }
+  .blur2{
+   animation: blur 2s ease-out 1s;
+   -webkit-animation: blur 2s ease-out 1s;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   background: transparent;
+   color: transparent;
+  }
+  
