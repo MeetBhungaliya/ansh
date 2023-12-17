@@ -4,7 +4,47 @@
 
 
 @layer components {
-    .line {
-        @apply h-full w-[1px] absolute top-0 -z-[10] bg-[#1c1c1c] before:content-[''] before:w-[1px] before:absolute before:right-[-1px] before:h-[60px] before:bg-[linear-gradient(0deg,#fff,transparent)] before:animate-line
+    .lineD {
+        @apply h-full w-[1px] absolute top-0 -z-[10] bg-[#1c1c1c] before:content-[''] before:w-[1px] before:h-[60px] before:absolute before:right-[-1px] before:-top-[15%] before:bg-[linear-gradient(0deg,#fff,transparent)] before:transition-all
+    }
+    .lineH {
+        @apply h-[1px] w-full absolute left-0 -z-[10] bg-[#1c1c1c] before:content-[''] before:w-[60px] before:h-[1px] before:absolute before:-left-[15%] before:bg-[linear-gradient(-60deg,#fff,transparent)] before:transition-all
     }
 }
+
+.d1::before{
+    animation: lineD 10s ease-in-out 0s infinite ;
+ }.d2::before{
+    animation: lineD 10s ease-in-out 2s infinite ;
+ }.d3::before{
+    animation: lineD 10s ease-in-out 6s infinite ;
+ }.d4::before{
+    animation: lineD 10s ease-in-out 1s infinite ;
+ }.d5::before{
+    animation: lineD 10s ease-in-out 3s infinite ;
+ }.d6::before{
+    animation: lineD 10s ease-in-out 5s infinite ;
+ }
+
+.h1::before{
+    animation: lineH 5s ease-in-out 0s infinite ;
+ }.h2::before{
+    animation: lineH 5s ease-in-out 2s infinite ;
+ }.h3::before{
+    animation: lineH 5s ease-in-out 6s infinite ;
+ }.h4::before{
+    animation: lineH 5s ease-in-out 1s infinite ;
+ }.h5::before{
+    animation: lineH 5s ease-in-out 3s infinite ;
+ }.h6::before{
+    animation: lineH 5s ease-in-out 5s infinite ;
+ }
+
+  @keyframes lineD{
+    from{top:-15%}
+    to{top:100%}
+  }
+  @keyframes lineH{
+    from{left:-15%}
+    to{left:100%}
+  }
